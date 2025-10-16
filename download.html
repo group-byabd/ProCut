@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Téléchargement — EasyOs</title>
+  <meta name="description" content="Téléchargez EasyOs en ISO et suivez le guide d’installation en cinq étapes pour une mise en route fluide.">
+  <link rel="stylesheet" href="styles.css" /><link rel="icon" href="logo.svg" type="image/svg+xml" />
+</head>
+<body>
+<header><div class="container nav">
+  <div class="brand"><img src="logo.svg" alt="Logo EasyOs" /><div class="title">EasyOs</div></div>
+  <nav><a href="index.html">Accueil</a><a href="features.html">Fonctionnalités</a><a href="pricing.html">Tarifs</a><a class="active" href="download.html">Télécharger</a><a href="about.html">À propos</a><a href="contact.html" class="cta small">Contact</a><button class="theme-toggle" onclick="toggleTheme()">Thème</button></nav>
+</div></header>
+
+<main class="section">
+  <div class="container" style="max-width:900px">
+    <h2 class="h2">Télécharger EasyOs</h2>
+    <p class="p-lead">Choisissez votre image, suivez le guide, profitez d’un OS fluide.</p>
+
+    <div class="tile fade-in">
+      <p class="label">Images</p>
+      <h3>ISO / USB</h3>
+      <p>Installez EasyOs ou testez-le en live USB. Intégrité et performance garanties.</p>
+      <div style="display:flex; gap:10px; margin-top:10px">
+        <a class="btn primary" href="#" onclick="alert('Téléchargement ISO simulé — branche un vrai lien ISO.')">Télécharger ISO</a>
+        <a class="btn" href="#" onclick="alert('Assistant USB simulé — ajoute ton outil maison.')">Assistant USB</a>
+      </div>
+      <p class="note" style="margin-top:8px">Tip: vérifiez l’empreinte SHA-256 de l’image téléchargée.</p>
+    </div>
+
+    <div class="tile fade-in" style="margin-top:16px">
+      <p class="label">Guide</p>
+      <h3>Installation en 5 étapes</h3>
+      <ol style="margin:0; padding-left:18px">
+        <li>Créez une clé USB bootable (Rufus, Etcher).</li>
+        <li>Démarrez sur la clé via BIOS/UEFI.</li>
+        <li>Choisissez langue, réseau et région.</li>
+        <li>Sélectionnez le disque et l’édition (Famille, Premium, Pro).</li>
+        <li>Laissez l’assistant finaliser vos préférences.</li>
+      </ol>
+    </div>
+
+    <div class="card fade-in" style="margin-top:16px">
+      <strong>Compatibilité large.</strong> La plupart des chipsets, cartes graphiques et périphériques courants sont pris en charge dès l’installation.
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div><div class="brand" style="margin-bottom:10px"><img src="logo.svg" alt="Logo EasyOs" /><div class="title">EasyOs</div></div><p>Simple à installer, agréable à vivre.</p></div>
+    <div><p>Pages</p><a href="features.html">Fonctionnalités</a><br/><a href="pricing.html">Tarifs</a><br/><a href="download.html">Télécharger</a></div>
+    <div><p>Aide</p><a href="about.html">À propos</a><br/><a href="contact.html">Contact</a></div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
