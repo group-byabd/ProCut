@@ -63,18 +63,40 @@ document.addEventListener('DOMContentLoaded', () => {
   if(label){
     let text='Sélectionnez une formule', range='', points='';
     switch(plan){
-      case 'premium':
-        text='EasyOs Premium'; range='40–60€';
-        points='Création, dev, multitâche avancé. Confort maximal + sécurité renforcée.';
+      case 'easycut':
+        text = 'EasyCut (Monteurs)';
+        range = '120€/an ou 10€/mois';
+        points = 'Montez vos vidéos comme vous le souhaitez ! Un logiciel de montage sans limite !';
         break;
-      case 'professional':
-        text='EasyOs Professional'; range='60–80€';
-        points='Équipes, PME, outils pro, administration simple, support prioritaire.';
+
+      case 'artcut':
+        text = 'ArtCut (Designeurs)';
+        range = '90€/an ou 8,50€/mois';
+        points = 'Créez et designiez sans limite tout ce qui vous passe par la tête !';
         break;
-      case 'famille':
-        text='EasyOs Famille'; range='20–35€';
-        points='Maison, profils multiples, contrôle parental et simplicité.';
+
+      case 'pixcut':
+        text = 'PixCut (Photographes)';
+        range = '75€/an ou 7,50€/mois';
+        points = 'Retouchez vos photos pour qu’elles deviennent irréalistes !';
         break;
+
+      case 'saxcut':
+        text = 'SaxCut (Musiciens)';
+        range = '115€/an ou 10€/mois';
+        points = 'Créez et faites écouter vos plus belles prods à vos amis ou vos auditeurs !';
+        break;
+
+      case 'packcut':
+        text = 'PackCut (Pour tous)';
+        range = '325€/an ou 30€/mois';
+        points = 'Tous vos logiciels dans un seul pack !';
+        break;
+
+      default:
+        // rien de spécial, on garde le texte par défaut
+        break;
+
     }
     label.textContent = text;
     if(price) price.textContent = range;
