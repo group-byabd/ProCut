@@ -2,14 +2,15 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tarifs — EasyOs</title>
+  <title>Tarifs — ProCut</title>
   <meta name="description" content="EasyOs Premium 40–60€, Professional 60–80€, Famille 20–35€. Tarifs clairs, mises à jour incluses.">
   <link rel="stylesheet" href="styles.css" /><link rel="icon" href="logo.svg" type="image/svg+xml" />
 </head>
 <body>
 <header><div class="container nav">
-  <div class="brand"><img src="logo.svg" alt="Logo EasyOs" /><div class="title">EasyOs</div></div>
-  <nav><a href="index.html">Accueil</a><a href="features.html">Fonctionnalités</a><a class="active" href="pricing.html">Tarifs</a><a href="download.html">Télécharger</a><a href="about.html">À propos</a><a href="contact.html" class="cta small">Contact</a><button class="theme-toggle" onclick="toggleTheme()">Thème</button></nav>
+  <div class="brand"><img src="logo.svg" alt="Logo EasyOs" /><div class="title">ProCut</div></div>
+  <nav><a href="index.html">Accueil</a>  <!-- <a class="active" href="features.html">Fonctionnalités</a> -->
+<a class="active" href="pricing.html">Tarifs</a><a href="download.html">Télécharger</a><a href="about.html">À propos</a><a href="contact.html" class="cta small">Contact</a><button class="theme-toggle" onclick="toggleTheme()">Thème</button></nav>
 </div></header>
 
 <main class="section">
@@ -17,43 +18,65 @@
     <h2 class="h2">Choisissez votre formule</h2>
     <p class="p-lead">Tarifs nets. Mises à jour incluses. Pas de coûts cachés.</p>
 
-    <div class="pricing-cards">
-      <div class="price-card fade-in">
-        <div class="badge">Créateurs</div>
-        <h3>EasyOs Premium</h3>
-        <p class="range">40–60€</p>
-        <p>Création, montage, dev et multitâche avancé. Confort maximal, sécurité renforcée.</p>
-        <div style="display:flex; gap:8px; margin-top:8px">
-          <button class="btn primary" onclick="goToPayment('premium')">Passer au paiement</button>
-          <a class="btn ghost" href="features.html">Voir détails</a>
-        </div>
-      </div>
-
-      <div class="price-card fade-in">
-        <div class="badge" style="background:rgba(155,135,245,.15); color:#e7ddff; border-color:rgba(155,135,245,.35)">Équipes</div>
-        <h3>EasyOs Professional</h3>
-        <p class="range">60–80€</p>
-        <p>Outils pro, administration, déploiements simples. Stabilité et support prioritaire.</p>
-        <div style="display:flex; gap:8px; margin-top:8px">
-          <button class="btn primary" onclick="goToPayment('professional')">Passer au paiement</button>
-          <a class="btn ghost" href="features.html">Voir détails</a>
-        </div>
-      </div>
-
-      <div class="price-card fade-in">
-        <div class="badge" style="background:rgba(34,197,94,.15); color:#86efac; border-color:rgba(34,197,94,.35)">Famille</div>
-        <h3>EasyOs Famille</h3>
-        <p class="range">20–35€</p>
-        <p>Profils multiples, contrôle parental, simplicité pour tous. Idéal au quotidien.</p>
-        <div style="display:flex; gap:8px; margin-top:8px">
-          <button class="btn primary" onclick="goToPayment('famille')">Passer au paiement</button>
-          <a class="btn ghost" href="features.html">Voir détails</a>
-        </div>
-      </div>
+<div class="pricing-cards">
+  <div class="price-card fade-in">
+    <div class="badge">Monteurs</div>
+    <h3>EasyCut</h3>
+    <p class="range">120€/an ou 10€/mois</p>
+    <p>Montez vos vidéos comme vous le souhaitez ! Un logiciel de montage sans limite !</p>
+    <div style="display:flex; gap:8px; margin-top:8px">
+      <button class="btn primary" onclick="goToPayment('easycut')">Passer au paiement</button>
+      <a class="btn ghost" href="features.html">Voir détails</a>
     </div>
+  </div>
+
+  <div class="price-card fade-in">
+    <div class="badge">Designeurs</div>
+    <h3>ArtCut</h3>
+    <p class="range">90€/an ou 8,50€/mois</p>
+    <p>Créez et Designez sans limite tout ce qui vous passe par la tête !</p>
+    <div style="display:flex; gap:8px; margin-top:8px">
+      <button class="btn primary" onclick="goToPayment('artcut')">Passer au paiement</button>
+      <a class="btn ghost" href="artcut.html">Voir détails</a>
+    </div>
+  </div>
+
+  <div class="price-card fade-in">
+    <div class="badge">Photographes</div>
+    <h3>PixCut</h3>
+    <p class="range">75€/an ou 7,50€/mois</p>
+    <p>Retouchez vos photos pour quelle devienne irréaliste !</p>
+    <div style="display:flex; gap:8px; margin-top:8px">
+      <button class="btn primary" onclick="goToPayment('pixcut')">Passer au paiement</button>
+      <a class="btn ghost" href="pixcut.html">Voir détails</a>
+    </div>
+  </div>
+
+  <div class="price-card fade-in">
+    <div class="badge" style="background:rgba(155,135,245,.15); color:#e7ddff; border-color:rgba(155,135,245,.35)">Musiciens</div>
+    <h3>SaxCut</h3>
+    <p class="range">115€/an ou 10€/mois</p>
+    <p>Créez et faites écoutez vos plus belles prod à vos amis ou vos auditeurs !</p>
+    <div style="display:flex; gap:8px; margin-top:8px">
+      <button class="btn primary" onclick="goToPayment('saxcut')">Passer au paiement</button>
+      <a class="btn ghost" href="saxcut.html">Voir détails</a>
+    </div>
+  </div>
+
+  <div class="price-card fade-in">
+    <div class="badge" style="background:rgba(34,197,94,.15); color:#86efac; border-color:rgba(34,197,94,.35)">Pour tous</div>
+    <h3>PackCut</h3>
+    <p class="range">325€/an ou 30€/mois</p>
+    <p>Tous vos logiciels dans un seul pack !</p>
+    <div style="display:flex; gap:8px; margin-top:8px">
+      <button class="btn primary" onclick="goToPayment('packcut')">Passer au paiement</button>
+      <a class="btn ghost" href="packcut">Voir détails</a>
+    </div>
+  </div>
+</div>
 
     <div class="card fade-in" style="margin-top:18px">
-      <strong>Transparence.</strong> Pas de pubs ni tracking invasif. Support humain, rapide.
+      <strong>News.</strong> De nouveaux logiciels arrivent pour créer encore plus !
     </div>
   </div>
 </main>
