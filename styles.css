@@ -119,7 +119,7 @@ nav a.active::after{
 }
 .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
 .tile{
-  background:var(--surface); border:1px solid var(--line); border-radius:var(--r-tile); padding:18px;
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r-tile); padding:22px;
   transition:transform var(--t-normal) ease, box-shadow var(--t-normal) ease, border-color var(--t-normal) ease;
 }
 .tile:hover{transform:translateY(-6px); box-shadow:var(--shadow-2); border-color:rgba(162,169,184,.35)}
