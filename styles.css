@@ -225,4 +225,5 @@ footer {
   .tile:hover { transform: none; }
   .fade-in, .fade-in.show { transition: none; }
   .btn, .card, .price-card { transition: none; }
+  
 }
