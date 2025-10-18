@@ -131,15 +131,32 @@ nav a.active::after {
 }
 .card:hover { box-shadow: var(--shadow-2); transform: translateY(-4px); }
 
-.grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+/* === Cartes uniformes (Pourquoi ProCut) === */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+  align-items: stretch; /* même hauteur pour toutes les colonnes */
+}
 .tile {
-  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-tile); padding: 20px;
-  transition: transform var(--t-normal) ease, box-shadow var(--t-normal) ease, border-color var(--t-normal) ease;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-tile);
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 260px; /* ajuste selon ton design */
+
+  transition: transform var(--t-normal) ease,
+              box-shadow var(--t-normal) ease,
+              border-color var(--t-normal) ease;
 }
 .tile:hover { transform: translateY(-6px) scale(1.02); box-shadow: var(--shadow-2); border-color: rgba(162,169,184,.35); }
 .tile .label { color: var(--muted); font-size: 13px; margin-bottom: 6px; text-transform: uppercase; letter-spacing: .5px; font-weight: 600; }
 .tile h3 { margin: 0 0 8px; font-size: 20px; font-weight: 700; }
-.tile .p-lead { margin: 0; }
+.tile .p-lead { margin-top: auto; } /* aligne le texte du bas */
 
 /* Pricing */
 .pricing-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; align-items: stretch; }
@@ -208,6 +225,7 @@ footer {
   .section { padding: 60px 0; }
   .form-grid { grid-template-columns: 1fr; }
   nav { gap: 2px; }
+  .tile { min-height: 220px; } /* ajuste la hauteur uniforme sur mobile */
 }
 
 @media (max-width: 640px) {
@@ -225,5 +243,4 @@ footer {
   .tile:hover { transform: none; }
   .fade-in, .fade-in.show { transition: none; }
   .btn, .card, .price-card { transition: none; }
-  
 }
