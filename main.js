@@ -86,11 +86,21 @@ document.addEventListener('DOMContentLoaded', () => {
         range = '115€/an ou 10€/mois';
         points = 'Créez et faites écouter vos plus belles prods à vos amis ou vos auditeurs !';
         break;
-
+      case 'procutia':
+        text = 'ProCutIA (Intelligence Artificielle)';
+        range = '250€/an ou 25€/mois';
+        points = 'Notre IA pensé pour vos besoins et créez ce que vous ne pensez jamais réalité !';
+        break;
+    
       case 'packcut':
         text = 'PackCut (Pour tous)';
         range = '325€/an ou 30€/mois';
         points = 'Tous vos logiciels dans un seul pack !';
+        break;
+      case 'educationcut':
+        text = 'EducationCut (Education)';
+        range = '299,90€/an ou 25€/mois';
+        points = 'Tout votre pack a prix réduit !';
         break;
 
       default:
