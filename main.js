@@ -123,3 +123,28 @@ document.addEventListener('click', (e) => {
   e.preventDefault();
   transitionTo(href);
 });
+let userInteracted = false;
+
+// Détecter une interaction utilisateur (clic, scroll, touche)
+window.addEventListener("click", () => userInteracted = true);
+window.addEventListener("keydown", () => userInteracted = true);
+window.addEventListener("scroll", () => userInteracted = true);
+
+const video = document.getElementById("visionVideo");
+
+if (video) {
+  video.parentElement.addEventListener("mouseenter", () => {
+    if (userInteracted) {
+      try {
+        video.muted = false;
+        video.volume = 1;
+      } catch (e) {
+        console.warn("Impossible d’activer le son :", e);
+      }
+    }
+  });
+
+  video.parentElement.addEventListener("mouseleave", () => {
+    video.muted = true;
+  });
+}
