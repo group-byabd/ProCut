@@ -176,4 +176,13 @@ function setupVideoSound(videoId, toggleId, cardId) {
 // Initialiser chaque bloc vidéo individuellement
 setupVideoSound("visionVideo1", "enableSoundToggle1", "vision-card1");
 setupVideoSound("visionVideo2", "enableSoundToggle2", "vision-card2");
+// Ne pas intercepter les liens dans les formulaires
+document.addEventListener('click', (e) => {
+  const a = e.target.closest('a');
+  if (!a || a.closest('form')) return; // ← cette ligne protège les formulaires
+  const href = a.getAttribute('href');
+  if (!href || href.startsWith('http') || href.startsWith('#')) return;
+  e.preventDefault();
+  transitionTo(href);
+});
 
