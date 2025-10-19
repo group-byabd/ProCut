@@ -292,12 +292,12 @@ footer {
 }
 .video-tile {
   position: relative;
-  padding: 0; /* retire le padding interne */
+  padding: 0;
   overflow: hidden;
   border-radius: var(--r-tile);
-  min-height: 260px;
   border: 1px solid var(--line);
   background: none;
+  min-height: 460px; /* ✅ corrige la hauteur */
 }
 
 .video-tile .video-bg {
@@ -308,7 +308,60 @@ footer {
   object-fit: cover;
   z-index: 0;
 }
-#vision-card {
-  min-height: 460px;
+
+#enableSoundBtn1,
+#enableSoundBtn2 {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 12px auto;
 }
+.sound-toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 12px auto;
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.sound-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  border-radius: 34px;
+  background: rgba(255, 255, 255, 0.2);
+  transition: 0.4s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.4s;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+input:checked + .slider {
+  background: rgba(0, 255, 150, 0.3);
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
 
