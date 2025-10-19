@@ -363,5 +363,25 @@ input:checked + .slider {
 input:checked + .slider::before {
   transform: translateX(26px);
 }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(600px 240px at 20% -10%, var(--brand), transparent),
+    radial-gradient(600px 240px at 80% 110%, var(--accent), transparent);
+  background-size: 200% 200%;
+  animation: bgFlow 18s ease-in-out infinite;
+  opacity: 0.08;
+}
+
+@keyframes bgFlow {
+  0% { background-position: 0% 50%; opacity: 0.06; }
+  50% { background-position: 100% 50%; opacity: 0.12; }
+  100% { background-position: 0% 50%; opacity: 0.06; }
+}
+
 
 
