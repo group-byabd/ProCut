@@ -308,4 +308,7 @@ footer {
   object-fit: cover;
   z-index: 0;
 }
+#vision-card {
+  min-height: 460px;
+}
 
