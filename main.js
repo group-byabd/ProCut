@@ -123,28 +123,57 @@ document.addEventListener('click', (e) => {
   e.preventDefault();
   transitionTo(href);
 });
+// Interaction utilisateur : détecter clic, scroll, touche
+// Détection d'interaction utilisateur (clic, scroll, touche)
 let userInteracted = false;
-
-// Détecter une interaction utilisateur (clic, scroll, touche)
 window.addEventListener("click", () => userInteracted = true);
 window.addEventListener("keydown", () => userInteracted = true);
 window.addEventListener("scroll", () => userInteracted = true);
 
-const video = document.getElementById("visionVideo");
+// Fonction modulaire pour gérer chaque vidéo + switch
+function setupVideoSound(videoId, toggleId, cardId) {
+  const video = document.getElementById(videoId);
+  const toggle = document.getElementById(toggleId);
+  const card = document.getElementById(cardId);
 
-if (video) {
-  video.parentElement.addEventListener("mouseenter", () => {
-    if (userInteracted) {
-      try {
-        video.muted = false;
-        video.volume = 1;
-      } catch (e) {
-        console.warn("Impossible d’activer le son :", e);
+  if (video && card) {
+    card.addEventListener("mouseenter", () => {
+      if (userInteracted && toggle?.checked) {
+        try {
+          video.muted = false;
+          video.volume = 1;
+          video.load(); // recharge la source si nécessaire
+          video.play(); // relance la lecture si bloquée
+        } catch (e) {
+          console.warn("Impossible d’activer le son :", e);
+        }
       }
-    }
-  });
+    });
 
-  video.parentElement.addEventListener("mouseleave", () => {
-    video.muted = true;
-  });
+    card.addEventListener("mouseleave", () => {
+      video.muted = true;
+    });
+  }
+
+  if (video && toggle) {
+    toggle.addEventListener("change", (e) => {
+      if (e.target.checked) {
+        try {
+          video.muted = false;
+          video.volume = 1;
+          video.load();
+          video.play();
+        } catch (err) {
+          console.warn("Impossible d’activer le son via le switch :", err);
+        }
+      } else {
+        video.muted = true;
+      }
+    });
+  }
 }
+
+// Initialiser chaque bloc vidéo individuellement
+setupVideoSound("visionVideo1", "enableSoundToggle1", "vision-card1");
+setupVideoSound("visionVideo2", "enableSoundToggle2", "vision-card2");
+
