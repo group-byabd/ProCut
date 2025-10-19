@@ -290,3 +290,22 @@ footer {
   .fade-in, .fade-in.show { transition: none; }
   .btn, .card, .price-card { transition: none; }
 }
+.video-tile {
+  position: relative;
+  padding: 0; /* retire le padding interne */
+  overflow: hidden;
+  border-radius: var(--r-tile);
+  min-height: 260px;
+  border: 1px solid var(--line);
+  background: none;
+}
+
+.video-tile .video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
